@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 
 
 # arr_int = np.array([-1, 2, 3], dtype=np.int8)
@@ -27,3 +27,21 @@ import numpy as np
 arr_objek = np.array([1, "text", [1, 2, 3]], dtype=object)
 print(arr_objek)
 print(arr_objek.dtype)
+
+
+def tambah(a: int, b: int) -> int:
+    try:
+        if a <= 0 and b <= 0:
+            print("yang bener aja bro")
+    except ValueError:
+        print("kocak lu")
+    except Exception as e:
+        print(f"errorr bro {e}")
+    finally:
+        return f"hasil tambah adalah {a + b}"
+
+
+if __name__ == "__main__":
+    a = int(input("masukkan angka pertama: "))
+    b = int(input("masukkan angka kedua :"))
+    print(tambah(a, b))
